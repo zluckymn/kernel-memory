@@ -1,0 +1,39 @@
+一、官方文档与核心仓库 链接
+
+类型名称链接官方文档Semantic Kernel 文档 - Microsoft Learnhttps://learn.microsoft.com/ja-jp/semantic-kernel/核心仓库microsoft/semantic-kernelhttps://github.com/microsoft/semantic-kernel 入门 Startermicrosoft/semantic-kernel-startershttps://github.com/microsoft/semantic-kernel-starters 详细示例Semantic Kernel Detailed Sampleshttps://learn.microsoft.com/ja-jp/semantic-kernel/get-started/detailed-samples AI Hub 文档Semantic KernelAI Hub社区精选awesome-semantickernelhttps://github.com/geffzhang/awesome-semantickernel
+
+二。框架对比： langchain，autogpt，crawAI，openmanus 等补充其他
+
+三。目的：
+让没有经历过AI开发的企业开发人员，能够快速根据文档落地企业poc，完成一个可用的 poc项目并演示
+
+其他示例：
+
+## 向量存储生成嵌入 
+
+## https://learn.microsoft.com/en-us/semantic-kernel/concepts/vector-store-connectors/embedding-generation?pivots=programming-language-csharp
+   Hybrid Search  混合搜索 https://learn.microsoft.com/en-us/semantic-kernel/concepts/vector-store-connectors/hybrid-search?pivots=programming-language-csharp
+
+综合用例：
+https://learn.microsoft.com/en-us/semantic-kernel/concepts/vector-store-connectors/how-to/vector-store-data-ingestion?pivots=programming-language-csharp
+
+提示词的重要性 ：https://learn.microsoft.com/en-us/semantic-kernel/concepts/prompts/
+
+插件的概念以及使用（本机代码 MPC等）：
+https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/?pivots=programming-language-csharp
+
+四。其他最终代码示例补充、
+   1.一个叫QueryByStream 的API controler 方法 兼容openAI，以sse格式返回前端， 输入“厦门维保报告，详细介绍”
+   2.该功能有3个agent
+      2.1.根据对用户输入的内容进行翻译成对应语言的翻译 调用 OpenAI
+      2.2 根据用户的输入 进行意图识别，用户需要documentsearch 操作  调用QWen3
+      2.2. 提取用户输入内容，比如  提取 厦门维保报告  返回   调用 ollama
+      3.3. 调用现有的第三方文档搜索API 返回流逝数据以sse方式返回前端 （httpclient）
+   3.注意不同agent使用不同的模型
+   4.需要增加聊天记录的reduce策略以及持久化
+
+
+
+
+
+
